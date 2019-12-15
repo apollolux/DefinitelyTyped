@@ -377,6 +377,24 @@ export interface ColorButtonProps extends GridChildrenProps, Label, Stretchy {
  */
 export class ColorButton extends React.Component<ColorButtonProps> { }
 
+export interface FontButtonProps extends GridChildrenProps, Label, Stretchy {
+	/**
+	 * Called when the font is changed from the FontButton.
+	 */
+	onChange?: (font: {
+		fontFamily: string,
+		fontSize: number,
+		fontWeight: string,
+		fontStyle: string,
+		textStretch: string
+	}) => void;
+}
+
+/**
+ * A button that allows the user to choose a font.
+ */
+export class FontButton extends React.Component<FontButtonProps> { }
+
 export interface FormProps extends GridChildrenProps, Stretchy {
     /**
      * Whether the Form is enabled.
